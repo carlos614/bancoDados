@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.3.11
+- http://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: 16-Nov-2017 às 23:28
+- Versão do servidor: 5.6.24
+- PHP Version: 5.6.8
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="wda_crud" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="cliente">
+                CREATE TABLE `cliente` (
+                  `cod.cliente` int(11) NOT NULL DEFAULT '0',
+                  `nome` varchar(30) DEFAULT NULL,
+                  PRIMARY KEY (`cod.cliente`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="codicao pgto">
+                CREATE TABLE `codicao pgto` (
+                  `cod.pgto` int(11) NOT NULL,
+                  `diaspgto` int(11) NOT NULL,
+                  `nomepgto` varchar(30) NOT NULL,
+                  PRIMARY KEY (`cod.pgto`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="pedido">
+                CREATE TABLE `pedido` (
+                  `quantidade` int(11) DEFAULT NULL,
+                  `datapedido` int(11) DEFAULT NULL
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="produto">
+                CREATE TABLE `produto` (
+                  `cod.produto` int(11) DEFAULT NULL,
+                  `nome` varchar(30) DEFAULT NULL
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="transportadora">
+                CREATE TABLE `transportadora` (
+                  `cnpj` int(11) NOT NULL,
+                  `nome` varchar(30) NOT NULL,
+                  `cod.transportadora` int(11) NOT NULL,
+                  PRIMARY KEY (`cnpj`,`cod.transportadora`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'wda_crud'
+    -->
+    <database name="wda_crud">
+        <!-- Tabela cliente -->
+        <!-- Tabela codicao pgto -->
+        <!-- Tabela pedido -->
+        <!-- Tabela produto -->
+        <!-- Tabela transportadora -->
+    </database>
+</pma_xml_export>
